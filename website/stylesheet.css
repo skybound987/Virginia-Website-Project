@@ -1,0 +1,87 @@
+:root {
+  /* Color Scheme */
+  
+  /*  Off White */
+  --color1: #F4F1D7;
+
+  /* Gold */
+  --color2: #E8DA40;
+
+  /* blue */
+  --color3: #265FC9;
+  
+  /* Red */
+  --color4: #D6333E;
+  
+  /* Dark Blue*/
+  --color5: #0D1930;
+}
+
+/*  
+Still Need To Add These:
+      - Fix Hover
+      - Add a float element
+      - Absolute and Relative Positioning
+      - One ID Selector for unique tag
+*/
+
+body {
+  background: linear-gradient(to bottom, #265FC9 0%, #0099cc 100%)
+}
+
+h1 {
+  border-radius: 25px;
+  border: 5px solid var(--color5);
+  padding: 10px;
+  width: 2000px;
+  height: 65px;
+  margin: 0 auto;
+  background-color: rgb(4, 26, 134);
+  color: var(--color1);
+  font-size: 50px;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+h2 {
+  color: var(--color5);
+  font-size: 25px;
+  font-family: sans-serif;
+}
+
+h3 {
+  color: var(--color5);
+  font-size: 21px;
+  font-family: sans-serif;
+}
+
+h4  {
+  color: var(--color3);
+  font-size: 22px;
+  font-family: sans-serif;
+}
+
+nav {
+  background-color: #ddd;
+  margin-bottom: 20px;
+}
+
+/* This disables the underlining of visited links */
+.sidebar a:visited {
+  text-decoration: none;
+}
+/* Styles for the Sidebar Class */
+
+.sidebar {
+  border: 2px solid;
+  border-radius: 25px;
+  width: 700px;
+  background-color: var(--color1);
+  text-align: center;
+  margin: 0 auto;
+  padding: 10px
+}
+
+.sidebar a:hover {
+  background-color: rgba(7, 204, 219, 0.686);
+}
