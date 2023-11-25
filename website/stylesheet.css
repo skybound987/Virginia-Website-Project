@@ -1,5 +1,5 @@
 :root {
-  /* Color Scheme */
+  /* Color Scheme for the entire stylesheet */
   
   /*  Off White */
   --color1: #F4F1D7;
@@ -7,7 +7,7 @@
   /* Gold */
   --color2: #E8DA40;
 
-  /* blue */
+  /* Blue */
   --color3: #265FC9;
   
   /* Red */
@@ -25,20 +25,36 @@ Still Need To Add These:
       - One ID Selector for unique tag
 */
 
+
+/* box-sizing includes padding when calculating box sizes. Since padding varies by style, this keeps box size consistent. */
+* {
+  box-sizing: border-box;
+}
+
+/* Wrappers for flex boxes for aligning various areas of the page, elements are displayed in the order they listed in the HTML document */
+.wrapper {
+    display: flex;
+    margin: 0 auto;
+    width: 50%;
+}
+
+/* Styles for the body element */
 body {
   background: linear-gradient(to bottom, #265FC9 0%, #0099cc 100%)
 }
 
+
+/* Styles for Main Header and additional headers */
 h1 {
-  border-radius: 25px;
+  border-radius: 10px;
   border: 5px solid var(--color5);
-  padding: 10px;
-  width: 2000px;
-  height: 65px;
+  padding: 15px;
+  width: 50%;
+  height: 100%;
   margin: 0 auto;
   background-color: rgb(4, 26, 134);
   color: var(--color1);
-  font-size: 50px;
+  font-size: 35px;
   font-family: sans-serif;
   text-align: center;
 }
@@ -56,32 +72,79 @@ h3 {
 }
 
 h4  {
-  color: var(--color3);
-  font-size: 22px;
+  color: var(--color5);
+  font-size: 15px;
   font-family: sans-serif;
 }
 
+
+/* Styles for the Nav Class */
 nav {
-  background-color: #ddd;
-  margin-bottom: 20px;
+  border: 2px solid;
+  border-radius: 10px;
+  width: 50%;
+  background-color: var(--color1);
+  text-align: left;
+  margin: 0 auto;
+  padding: 10px
+}
+
+nav ul {
+  list-style: none; /* Removes the default list styling */
+  padding: 0; /* Removes the default padding */
+  margin: 0; /* Adjust as needed */
+  display: flex; /* Aligns list items horizontally */
+}
+
+nav li {
+  margin-right: 10px; /* Adjust spacing between items */
+}
+
+nav a {
+  text-decoration: none; /* Optional: Removes the underline from links */
+  color: [your link color]; /* Style as needed */
+}
+
+nav a:hover {
+  text-decoration: wavy underline overline goldenrod; /* Optional: Adds an underline on hover */
+}
+
+nav a:visited {
+  text-decoration: underline;
+}
+
+/* Styles for the Section Class */
+section {
+  border: 2px solid;
+  border-radius: 10px;
+  width: 75%;
+  background-color: var(--color1);
+  text-align: center;
+  padding: 10px
+}
+
+section a:hover {
+  background-color: rgba(7, 204, 219, 0.686);
+}
+
+
+/* Styles for the Sidebar Class */
+.sidebar {
+  border: 2px solid;
+  border-radius: 10px;
+  width: 25%;
+  background-color: var(--color1);
+  text-align: left;
+  padding: 10px
+}
+
+.sidebar a:hover {
+  color: pink;
+  background-color: black;
 }
 
 /* This disables the underlining of visited links */
 .sidebar a:visited {
   text-decoration: none;
-}
-/* Styles for the Sidebar Class */
-
-.sidebar {
-  border: 2px solid;
-  border-radius: 25px;
-  width: 700px;
-  background-color: var(--color1);
-  text-align: center;
-  margin: 0 auto;
-  padding: 10px
-}
-
-.sidebar a:hover {
-  background-color: rgba(7, 204, 219, 0.686);
+  color:blue;
 }
