@@ -78,7 +78,7 @@ h4  {
 }
 
 
-/* Styles for the Nav Class */
+/* Styles for the Nav Element */
 nav {
   border: 2px solid;
   border-radius: 10px;
@@ -113,7 +113,7 @@ nav a:visited {
   text-decoration: underline;
 }
 
-/* Styles for the Section Class */
+/* Styles for the Section Element */
 section {
   border: 2px solid;
   border-radius: 10px;
@@ -127,6 +127,56 @@ section a:hover {
   background-color: rgba(7, 204, 219, 0.686);
 }
 
+/* Unique ID class for centering an image */
+#centeredImage {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%; /* or a specific pixel value */
+}
+
+.text-container {
+  width: 50%; /* or any width you prefer */
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+/* Styles for the form element */
+form {
+  border: 2px solid;
+  border-radius: 10px;
+  width: 50%;
+  margin: 0 auto;
+  background-color: var(--color1);
+  padding: 10px
+}
+
+form label {  /* This aligns all the label text to the right */
+  flex: 0 0 200px;
+  margin-right: 10px;
+  text-align: right;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  flex-grow: 1;
+  padding: 5px;
+  max-width: 25%;
+}
+
+form input[type="submit"] {
+  margin-left: 210px; /* Aligns submit button with input fields */
+}
+
+/* A class exclusively for the alignment of the form boxes so they can be aligned */
+.forms {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 10px;
+}
 
 /* Styles for the Sidebar Class */
 .sidebar {
@@ -147,4 +197,21 @@ section a:hover {
 .sidebar a:visited {
   text-decoration: none;
   color:blue;
+}
+
+/* Fun stuff, includes unique ID for animating the mailing list request */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-25%); }
+}
+
+@keyframes colorChange {
+  0% { color: red; }
+  50% { color: blue; }
+  100% { color: green; }
+}
+
+#animated {
+  animation: bounce 2.5s ease-in-out infinite, colorChange 5.5s ease-in-out infinite;
+  text-align: center;
 }
