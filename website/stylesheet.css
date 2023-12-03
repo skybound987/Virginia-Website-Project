@@ -1,5 +1,5 @@
 :root {
-  /* Color Scheme for the entire stylesheet */
+  /* Custom Color Scheme for the entire stylesheet */
   
   /*  Off White */
   --color1: #F4F1D7;
@@ -17,14 +17,22 @@
   --color5: #0D1930;
 }
 
-/*  
-Still Need To Add These:
-      - Fix Hover
-      - Add a float element
-      - Absolute and Relative Positioning
-      - One ID Selector for unique tag
-*/
+.relative {
+  position: relative;
+  width: 500px;
+  height: 400px;
+  margin: auto;
+  padding-right: 100px;
+  padding-left: 10px;
+} 
 
+.absolute {
+  position: absolute;
+  top: 110px;
+  right: 0px;
+  width: 300px;
+  height: 200px;
+}
 
 /* box-sizing includes padding when calculating box sizes. Since padding varies by style, this keeps box size consistent. */
 * {
@@ -33,9 +41,9 @@ Still Need To Add These:
 
 /* Wrappers for flex boxes for aligning various areas of the page, elements are displayed in the order they listed in the HTML document */
 .wrapper {
-    display: flex;
-    margin: 0 auto;
-    width: 50%;
+  display: flex;
+  margin: 0 auto;
+  width: 50%;
 }
 
 /* Styles for the body element */
@@ -54,9 +62,11 @@ body {
 
 /* Styles for the references page that indent the second line for APA formatting purposes */
 .reference-list p {
-  text-indent: -5em;    /* Negative indent for the second line onwards */
-  padding-left: 5em;    /* Aligns the first line with the rest of the content */
-  margin-left: 20px;    /* Optional: Adds some space on the left */
+  text-indent: -3em;    /* Negative indent for the second line onwards */
+  padding-left: 5em; 
+  margin-left: 20px;
+  width: 80%; 
+  word-wrap: break-word;
 }
 
 /* Styles for the reference subscript text */
@@ -78,6 +88,7 @@ h1 {
   font-size: 35px;
   font-family: sans-serif;
   text-align: center;
+  min-width: 635px;
 }
 
 h2 {
@@ -106,32 +117,30 @@ nav {
   width: 50%;
   background-color: var(--color1);
   text-align: left;
-  margin: 0 auto;
+  margin-left: auto; /* Center align */
+  margin-right: auto;
   padding: 10px;
+  min-width: 635px;
 }
 
 nav ul {
-  list-style: none; /* Removes the default list styling */
-  padding: 0; /* Removes the default padding */
-  margin: 0; /* Adjust as needed */
+  list-style: none; /* Removes the bullet points */
+  padding: 0; 
+  margin: 0; 
   display: flex; /* Aligns list items horizontally */
+  min-width: 635px;
 }
 
 nav li {
-  margin-right: 10px; /* Adjust spacing between items */
+  margin-right: 10px; 
 }
 
 nav a {
-  text-decoration: none; /* Optional: Removes the underline from links */
-  color: [your link color]; /* Style as needed */
+  text-decoration: none; /* Removes the underline from links */
 }
 
 nav a:hover {
-  text-decoration: wavy underline overline goldenrod; /* Optional: Adds an underline on hover */
-}
-
-nav a:visited {
-  text-decoration: underline;
+  text-decoration: wavy underline;
 }
 
 /* Styles for the Section Element */
@@ -141,7 +150,8 @@ section {
   width: 75%;
   background-color: var(--color1);
   text-align: left;
-  padding: 10px
+  padding: 10px;
+  min-width: 510px; 
 }
 
 section a:hover {
@@ -157,7 +167,7 @@ section a:hover {
 }
 
 .text-container {
-  width: 50%; 
+  width: 75%; 
   margin-left: auto;
   margin-right: auto;
   text-align: left;
@@ -191,12 +201,11 @@ form input[type="submit"] {
   margin-left: 210px; /* Aligns submit button with input fields */
 }
 
-/* A class exclusively for the alignment of the form boxes so they can be aligned */
+/* Styles for Forms class */
 .forms {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  margin-bottom: 10px;
+  display: flex; /* Aligns all of the form fields */
+  align-items: center; /* Aligns form field name to be centered with the fields */
+  margin-bottom: 2px; /* adds some vertical space in between the fields */
 }
 
 /* Styles for the Sidebar Class */
@@ -206,18 +215,43 @@ form input[type="submit"] {
   width: 25%;
   background-color: var(--color1);
   text-align: left;
-  padding: 10px
+  padding: 10px;
+  min-width: 200px;
 }
 
-.sidebar a:hover {
-  color: pink;
-  background-color: black;
+a:hover {
+  background-color: var(--color4);
 }
 
 /* This disables the underlining of visited links */
 .sidebar a:visited {
   text-decoration: none;
   color:blue;
+}
+
+/* Styles for tables */
+table {
+  display: flex;
+  justify-content: center;
+  border-collapse: collapse;
+}
+
+td {
+  border: 1px solid var(--color5);
+  padding: 8px;
+  text-align: center;
+  width: 20px;
+  height: 10px;
+}
+
+th {
+  width: 20px;
+  height: 10px;
+  background-color: var(--color4);
+  border: 1px solid var(--color5);
+  padding: 8px;
+  text-align: center;
+  color: whitesmoke;
 }
 
 
@@ -231,6 +265,11 @@ form input[type="submit"] {
   0% { color: red; }
   50% { color: blue; }
   100% { color: green; }
+}
+
+#MailingList {
+  font-style: italic;
+  font-size: smaller;
 }
 
 #animated {
