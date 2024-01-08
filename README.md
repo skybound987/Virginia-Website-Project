@@ -7,4 +7,4 @@ The website folder contains all the HTML, CSS, and images associated with buildi
 
 The site is hosted on W3 schools but it is only formatted for desktop viewing, I am planning to make the site mobile friendly.
 
-[https://skybound.w3spaces.com/](https://skybound.w3spaces.com/index.html)https://skybound.w3spaces.com/index.html
+[https://skybound.w3spaces.com/](https://skybound.w3spaces.com/index.html)
